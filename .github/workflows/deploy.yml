@@ -32,6 +32,9 @@ jobs:
         with:
           node-version: 18
           cache: 'npm'
+          cache-dependency-path: |
+            proj1/package-lock.json
+            proj2/package-lock.json
 
       - name:  install dependencies and build all projects
         run: cd proj-one && npm install && npm run build
