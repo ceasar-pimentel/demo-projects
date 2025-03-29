@@ -36,9 +36,18 @@ jobs:
             proj-one/package-lock.json
             proj-two/package-lock.json
 
-      - name:  install dependencies and build all projects
-        run: cd proj-one && npm install && npm run build
-          cd ../proj-two && npm install && npm run build
+      - name: Install and build proj1
+        run: |
+          cd proj-one
+          npm install
+          npm run build
+          
+      - name: Install and build proj2
+        run: |
+          cd proj-two
+          npm install
+          npm run build
+          
         
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
