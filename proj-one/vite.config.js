@@ -6,6 +6,6 @@ export default defineConfig({
 	plugins: [react()],
 	base: "/demo-projects/projectOne/", // Change for project2 and project3 accordingly
 	build: {
-		outDir: `../dist/projectOne`, // Change for project2 and project3
+		outDir: `dist/projectOne`, // Change for project2 and project3
 	},
 });
